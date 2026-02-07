@@ -94,3 +94,36 @@ BEGIN
     END IF;
 END$$
 DELIMITER ;
+
+-- =============================================
+-- 6. TRIGGER : Mise à jour du statut du client
+-- =============================================
+
+-- 1. je crée la colonne 'customerLevel' dans la table clients
+ALTER TABLE customers ADD COLUMN customerLevel VARCHAR(20) DEFAULT 'Standard';
+
+-- 2. LE TRIGGER : Mise à jour automatique du niveau
+DROP TRIGGER IF EXISTS UpdateCustomerLevel;
+
+DELIMITER $$
+CREATE TRIGGER UpdateCustomerLevel
+AFTER INSERT ON payments
+FOR EACH ROW
+BEGIN
+    DECLARE total_paid DECIMAL(10,2);
+
+    -- je calcule le total payé à vie par ce client
+    SELECT SUM(amount) INTO total_paid
+    FROM payments
+    WHERE customerNumber = NEW.customerNumber;
+
+    -- je met à jour son niveau selon le montant
+    IF total_paid > 100000 THEN
+        UPDATE customers SET customerLevel = 'VIP' WHERE customerNumber = NEW.customerNumber;
+    ELSEIF total_paid > 50000 THEN
+        UPDATE customers SET customerLevel = 'Gold' WHERE customerNumber = NEW.customerNumber;
+    ELSE
+        UPDATE customers SET customerLevel = 'Standard' WHERE customerNumber = NEW.customerNumber;
+    END IF;
+END$$
+DELIMITER ;
