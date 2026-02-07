@@ -45,7 +45,7 @@ Suivez ces étapes pour lancer le projet sur votre machine.
 ### 3. Installation de l'environnement Python
 1.  Clonez ce dépôt :
     ```bash
-    git clone [https://github.com/KarissyCISSE21/classicmodels-analysis.git](https://github.com/VOTRE-NOM-UTILISATEUR/classicmodels-analysis.git)
+    git clone [https://github.com/KarissyCISSE21/classicmodels-analysis.git](https://github.com/KarissyCISSE21/classicmodels-analysis.git)
     cd classicmodels-analysis
     ```
 
