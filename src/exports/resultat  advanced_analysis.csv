@@ -1,0 +1,24 @@
+employeeNumber,lastName,firstName,jobTitle,reportsTo,Niveau
+1002,Murphy,Diane,President,NULL,1
+1056,Patterson,Mary,"VP Sales",1002,2
+1076,Firrelli,Jeff,"VP Marketing",1002,2
+1088,Patterson,William,"Sales Manager (APAC)",1056,3
+1102,Bondur,Gerard,"Sale Manager (EMEA)",1056,3
+1143,Bow,Anthony,"Sales Manager (NA)",1056,3
+1621,Nishi,Mami,"Sales Rep",1056,3
+1611,Fixter,Andy,"Sales Rep",1088,4
+1612,Marsh,Peter,"Sales Rep",1088,4
+1619,King,Tom,"Sales Rep",1088,4
+1337,Bondur,Loui,"Sales Rep",1102,4
+1370,Hernandez,Gerard,"Sales Rep",1102,4
+1401,Castillo,Pamela,"Sales Rep",1102,4
+1501,Bott,Larry,"Sales Rep",1102,4
+1504,Jones,Barry,"Sales Rep",1102,4
+1702,Gerard,Martin,"Sales Rep",1102,4
+1165,Jennings,Leslie,"Sales Rep",1143,4
+1166,Thompson,Leslie,"Sales Rep",1143,4
+1188,Firrelli,Julie,"Sales Rep",1143,4
+1216,Patterson,Steve,"Sales Rep",1143,4
+1286,Tseng,"Foon Yue","Sales Rep",1143,4
+1323,Vanauf,George,"Sales Rep",1143,4
+1625,Kato,Yoshimi,"Sales Rep",1621,4
